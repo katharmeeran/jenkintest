@@ -16,12 +16,20 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                echo 'Running tests'
-                sh 'echo "Running tests..."'  // Replace with actual test command
+        stage('version') {
+                steps {
+                    echo 'test version'
+                    sh 'python3 --version'  // Replace with actual test command
+                }
             }
-        }
+    
+        stage('hello') {
+                steps {
+                    echo 'hello File'
+                    sh 'python hello.py'  // Replace with actual test command
+                }
+            }
+        
 
         stage('Deploy') {
             steps {
