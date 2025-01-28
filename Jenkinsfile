@@ -1,14 +1,13 @@
-pipeline
-    agent { label 'any' } 
-    stages {
-        stage('version') {
-            steps{
-                sh 'python3 --version'
-            }
-        }
-        stage('Hello') {
-            steps {
-                sh 'python3 hello.py'
-            }
-        }
+node('any') {
+    stage('Checkout') {
+        checkout scm
     }
+    
+    stage('Version') {
+        sh 'python3 --version'
+    }
+    
+    stage('Hello') {
+        sh 'python3 hello.py'
+    }
+}
