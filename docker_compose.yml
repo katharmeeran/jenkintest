@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     image: nginx:latest
-    container_name: my_nginx
+    container_name: my_nginx22
     ports:
       - "81:80"
     volumes:
@@ -13,7 +13,7 @@ services:
 
   db:
     image: postgres:latest
-    container_name: my_post_contain
+    container_name: my_post_contain1
     environment:
       POSTGRES_USER: postgr_me
       POSTGRES_PASSWORD: post123
