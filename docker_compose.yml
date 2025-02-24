@@ -15,7 +15,7 @@ services:
     image: postgres:latest
     container_name: my_postgres
     environment:
-      POSTGRES_USER: postgres
+      POSTGRES_USER: postgr_me
       POSTGRES_PASSWORD: post123
       POSTGRES_DB: mydatabase
     volumes:
