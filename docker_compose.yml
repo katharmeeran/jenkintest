@@ -15,8 +15,8 @@ services:
     image: postgres:latest
     container_name: my_postgres
     environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: post123
       POSTGRES_DB: mydatabase
     volumes:
       - pg_data:/var/lib/postgresql/data
